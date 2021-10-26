@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<div class="container-table">
+
+<table id="example" class="display" width="100%" data-page-length="10" data-order="[[ 1, &quot;asc&quot; ]]">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Namw</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Phone</th>
+          <th>email</th>
+          <th>Current Balance</th>
+          <th>Opening Balance</th>
+      </tr>
+  </thead>
+
+  <tbody>
+    {% for ele in data %}
+
+    <tr>
+    {% for i in ele %}
+      
+        <td>{{i}}</td>    
+    {% endfor %}
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<script>
+  $(document).ready(function() {
+      $('#example').DataTable();
+  } );
+</script>
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+    {% if title %}
+        <title>  {{title}}  </title>
+    {% else %}
+        <title> web app </title>    
+    {% endif %}
+</head>
+
+<body>
+
+    <header id="main-header"> 
+        <div class="container">
+            <h1>MY BASIC BLOG</h1>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li> <a href="{{ url_for('hello')}}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                <li> <a href="{{ url_for('logout')}}">Logout</a></li>
+                {% else %}
+                <li> <a href="{{ url_for('login')}}">Login</a></li>
+                <li> <a href="{{ url_for('register')}}">Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash-container">
+            <div class="flash">
+                    {{ message }}            
+            </div>
+        </div>
+    {% endfor %}     
+    
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

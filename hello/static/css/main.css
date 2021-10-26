@@ -1,0 +1,89 @@
+body{
+    background: #f4f4f4;
+    color: #555555;
+    font: normal 16px sans-serif;
+    line-height: 1.6em;
+
+}
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+
+}
+#main-header{
+    background: coral;
+    color: #fff;
+}
+#navbar{
+    background: #333;
+    color: #fff;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style: none;
+}
+#navbar li{
+    display: inline;
+}
+#navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+.my-form{
+    padding: 20px;
+
+}
+.my-form .form-group{
+    padding-bottom:  20 px ;
+}
+.my-form label{
+    display: block;
+}
+.my-form input[type="password"]{
+    padding: 8px;
+    width: 100%;
+
+}
+.my-form input[type="text"]{
+    padding: 8px;
+    width: 100%;
+}
+.button {
+    color:#333;
+    padding: 2px 12px;
+    margin-top: 5px;
+}
+.button:hover {
+    background: #333;
+    color: #fff;
+    padding: 2px 12px;
+    margin-top: 5px;
+    border: none;
+}
+.span-error{
+    background: rgb(211, 68, 68) ;
+    color: #fff;
+    width: 100%;
+    padding: 0px 10px;
+    margin-top: 5px;
+    
+
+}
+
+.container-table{
+    margin-top: 15px;
+    overflow: auto;
+}
+.flash-container{
+    padding: 20px 20px 0 20px ;
+}
+.flash {
+    background: rgba(255, 165, 0, 0.73);
+
+    width: 100% ;
+    padding: 8px 10px;
+ }
